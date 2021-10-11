@@ -1,4 +1,4 @@
-cli_options = ("-q", "-s", "-e", "-f","-op")
+cli_options = ("-q", "-s", "-f", "-e","-op")
 
 DISPLAY_OPTIONS = (
     "General topics and files",
