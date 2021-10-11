@@ -1,7 +1,6 @@
 
 from typing import Dict
 from helpers.browser import open_browser
-from .options import cli_options
 from argparse import Namespace
 from utils.query import builder
 from utils.cli_arguments.args import Init 

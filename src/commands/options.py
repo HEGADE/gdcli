@@ -1,8 +1,10 @@
-cli_options = ("-q", "-s", "-f", "-e","-op")
+CLI_OPTIONS = ("-q", "-s", "-f", "-e", "-op")
 
 DISPLAY_OPTIONS = (
-    "General topics and files",
-    "Instgram user finder",
-    "Phone number finder"
+    "option",
+    "search_query",
+    "site",
+    "file_type",
+    "exclude"
 
 )
