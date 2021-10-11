@@ -1,13 +1,7 @@
 import inquirer
 from typing import Dict
+from commands.options import DISPLAY_OPTIONS
 
-
-DISPLAY_OPTIONS = (
-    "General topics and files",
-    "Instgram user finder",
-    "Phone number finder"
-
-)
 
 
 def options() -> Dict:
