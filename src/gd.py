@@ -1,7 +1,6 @@
 
-from commands.cli import Cli
-from helpers.browser import open_browser
-from utils.query.select import options
+from src.commands.cli import Cli
 
 cli = Cli()
-cli()
+def start():
+    cli()

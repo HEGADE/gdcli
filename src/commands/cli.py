@@ -1,8 +1,8 @@
 
 from typing import Dict
-from helpers.browser import open_browser
-from utils.query import builder
-from utils.cli_arguments.args import Init
+from src.helpers.browser import open_browser
+from src.utils.query import builder
+from src.utils.cli_arguments.args import Init
 import sys
 
 
@@ -37,7 +37,7 @@ class Cli(Init):
                 if(args.get("search_query")):
                     site = f' site: {args.get("site")}' if args.get(
                         "site") else ''
-                    url: str = f' https://google.com/search?q={args.get("search_query")}{site} '
+                    url: str = f' https://google.com/search?q={args.get("search_query")} {site} '
                     excluded_site = builder.exclude_site(args.get("exclude"))
                     url += excluded_site if excluded_site else ''
                     return url

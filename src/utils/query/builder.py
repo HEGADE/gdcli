@@ -11,7 +11,7 @@ def exclude_site(site: str) -> str:
     else:
      
         return ''
-    return f'-"{site}"' if not url else url
+    return f'-{site}' if not url else url
 
 
 if __name__ == "__main__":
