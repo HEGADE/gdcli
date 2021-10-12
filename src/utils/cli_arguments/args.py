@@ -5,7 +5,14 @@ import argparse
 class Init():
     def _initialise_args__(self):
         self.parser = argparse.ArgumentParser(
-            "Commamd line tool for Google dorks")
+            '''Commamd line tool for Google dorks\n
+            1) -op 1 for general query \n
+             >> gd -op 1 -q ninja -s instagram -e gamer \n
+            2) -op 2 for instagram user finding
+              >> gd -op 2 -q ninja -b gamer -l usa
+            
+            
+            ''')
         self.parser.add_argument(
             CLI_OPTIONS[4], dest=DISPLAY_OPTIONS[0], type=int, help="Option [1 2 3]")
         self.parser.add_argument(

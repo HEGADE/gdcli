@@ -27,14 +27,14 @@ class Cli(Init):
             print()
             self.parser.print_usage()
             exit()
-
-        print(url)
-        open_browser(url=url)
+        if url is not None:
+            print(url)
+            open_browser(url=url)
 
     def __query_build_general__(self, args: Dict) -> str:
         try:
             if(any(args)):
-                if(args.get("search_query")):
+                if(args.get("search_query") or args.get("bio") or args.get("location")):
                     site = f' site: {args.get("site")}' if args.get(
                         "site") else ''
                     url: str = f' https://google.com/search?q={args.get("search_query")} {site} '
@@ -42,7 +42,8 @@ class Cli(Init):
                     url += excluded_site if excluded_site else ''
                     return url
                 else:
-                    raise Exception("Search string is not specified\n")
+                    raise Exception(
+                        "All required arguments are not provided\n")
 
             else:
                 raise Exception("All values are empty")
@@ -53,13 +54,16 @@ class Cli(Init):
 
     def __query_build_insta__(self, args: Dict) -> str or None:
         if any(args):
+            if args.get("search_query"):
 
-            url: str = f' https://google.com/search?q=site: instagram.com (inurl:{args.get("search_query")}* | intext:{args.get("bio")}*) {args.get("location")}'
-            return url
+                url: str = f' https://google.com/search?q=site: instagram.com (inurl:{args.get("search_query")}* | intext:{args.get("bio")}*) {args.get("location")}'
+                return url
+            else:
+                raise Exception("User name is not provided")
 
         else:
             sys.stdout.write(str("Values can not be empty"))
-        return ''
+        return None
 
     def __query_build_phone__(self, args: Dict) -> str:
         try:

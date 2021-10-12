@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    gd=src.gd:start
+    
