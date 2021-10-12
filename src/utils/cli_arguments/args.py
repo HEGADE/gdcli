@@ -1,7 +1,9 @@
-from commands.options import CLI_OPTIONS,DISPLAY_OPTIONS
+from commands.options import CLI_OPTIONS, DISPLAY_OPTIONS
 import argparse
+
+
 class Init():
-      def _initialise_args__(self):
+    def _initialise_args__(self):
         self.parser = argparse.ArgumentParser(
             "Commamd line tool for Google dorks")
         self.parser.add_argument(
@@ -14,7 +16,11 @@ class Init():
             CLI_OPTIONS[2], dest=DISPLAY_OPTIONS[3], type=str, help="File type")
         self.parser.add_argument(
             CLI_OPTIONS[3], dest=DISPLAY_OPTIONS[4], type=str, help="Things to exclude")
+        self.parser.add_argument(
+            CLI_OPTIONS[5], dest=DISPLAY_OPTIONS[5], type=str, help="Bio of the user")
+        self.parser.add_argument(
+            CLI_OPTIONS[6], dest=DISPLAY_OPTIONS[6], type=str, help="Bio of the user")
         self.args = self.parser.parse_args()
 
-      def __str__(self) -> str:
-          return f'Class that helps to initialize the commandline arguments'
+    def __str__(self) -> str:
+        return f'Class that helps to initialize the commandline arguments'
