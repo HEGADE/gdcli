@@ -21,7 +21,6 @@ Install google dork cli
   
 
     1) -op 1 for general query
-
         >> gdcli -op 1 -q ninja -s instagram -e gamer
 
     2) -op 2 for instagram user finding
