@@ -69,10 +69,11 @@ class Cli(Init):
                     url: str = f' https://google.com/search?q=inurl {args.get("search_query")} | intext: {args.get("search_query")} | inurl: {args.get("search_query")}'
                     return url
                 else:
-                    raise Exception("Should not be empty provide number for -q 23232332")
+                    raise Exception("Should not be empty provide number\n")
 
             else:
                 raise Exception("Values are empty")
         except Exception as e:
             sys.stdout.write(str(e))
+            self.parser.print_usage()
         return None
