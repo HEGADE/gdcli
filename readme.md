@@ -42,3 +42,4 @@ optional arguments:
   -l LOCATION      Bio of the user
 
 ```
+### Note this cli tool is still on development process and more features will be added very soon
