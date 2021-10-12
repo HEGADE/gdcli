@@ -1,6 +1,6 @@
 import inquirer
 from typing import Dict
-from src.commands.options import DISPLAY_OPTIONS
+from commands.options import DISPLAY_OPTIONS
 
 
 

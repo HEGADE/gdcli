@@ -1,8 +1,9 @@
 
 from typing import Dict
-from src.helpers.browser import open_browser
-from src.utils.query import builder
-from src.utils.cli_arguments.args import Init
+
+from gdcli.helpers.browser import open_browser
+from gdcli.utils.query import builder
+from gdcli.utils.cli_arguments.args import Init
 import sys
 
 

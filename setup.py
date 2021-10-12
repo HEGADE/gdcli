@@ -1,13 +1,14 @@
 from setuptools import setup, find_packages
 setup(
-    name="gd",
-    version="1.0.0",
+    name="gdcli",
+    version="1.0.3",
     author="Subrahmanya s hegade",
+    author_email="hegadedevelopment@gmail.com",
     description="Command line too used for simple google dorks",
-    packages=find_packages(include=['src', 'src.*']),
+    packages=find_packages(include=['gdcli', 'gdcli.*']),
     entry_points='''
     [console_scripts]
-    gd=src.gd:start
+    gdcli=gdcli.gd:start
     '''
 
 )
