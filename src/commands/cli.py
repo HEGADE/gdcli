@@ -21,7 +21,7 @@ class Cli(Init):
                 url = self.__query_build_phone__(vars(self.args))
             else:
                 raise Exception("Invalid option specified")
-                
+
         except Exception as e:
             sys.stdout.write(str(e))
             print()
@@ -38,16 +38,15 @@ class Cli(Init):
                     site = f' site: {args.get("site")}' if args.get(
                         "site") else ''
                     url: str = f' https://google.com/search?q={args.get("search_query")}{site} '
-                    excluded_site= builder.exclude_site(args.get("exclude"))
-                    url += excluded_site if excluded_site  else ''
+                    excluded_site = builder.exclude_site(args.get("exclude"))
+                    url += excluded_site if excluded_site else ''
                     return url
                 else:
                     raise Exception("Search string is not specified\n")
 
-
             else:
                 raise Exception("All values are empty")
-            
+
         except Exception as e:
             sys.stdout.write(str(e))
             return
@@ -63,5 +62,17 @@ class Cli(Init):
         return ''
 
     def __query_build_phone__(self, args: Dict) -> str:
-        if any(args):
-            pass
+        try:
+
+            if any(args):
+                if(args.get("search_query")):
+                    url: str = f' https://google.com/search?q=inurl {args.get("search_query")} | intext: {args.get("search_query")} | inurl: {args.get("search_query")}'
+                    return url
+                else:
+                    raise Exception("Should not be empty provide number for -q 23232332")
+
+            else:
+                raise Exception("Values are empty")
+        except Exception as e:
+            sys.stdout.write(str(e))
+        return None
