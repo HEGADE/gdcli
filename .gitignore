@@ -1,4 +1,6 @@
 __pycache__/
+build/
+dist/
 src.egg-info/
 gd.egg-info/
 gdcli.egg-info/
