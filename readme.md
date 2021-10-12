@@ -17,7 +17,7 @@ Install google dork cli
 ## Usage
 
 ```bash 
-    gdcli -h
+    >> gdcli -h
   
 
     1) -op 1 for general query
