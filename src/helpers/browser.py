@@ -9,7 +9,7 @@ def open_browser(url: str)->None:
         except Exception as e:
             pass
     else:
-        print("Function call with invalid arguments")
+        print("Function call with invalid arguments")# Added for debug perpose
 
 
 if __name__ == "__main__":
