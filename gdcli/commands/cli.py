@@ -29,7 +29,7 @@ class Cli(Init):
             self.parser.print_usage()
             exit()
         if url is not None:
-            
+
             open_browser(url=url)
 
     def __query_build_general__(self, args: Dict) -> str:
@@ -38,7 +38,7 @@ class Cli(Init):
                 if(args.get("search_query") or args.get("bio") or args.get("location")):
                     site = f' site: {args.get("site")}' if args.get(
                         "site") else ''
-                    url: str = f' https://google.com/search?q={args.get("search_query")} {site} '
+                    url: str = f'https://google.com/search?q={args.get("search_query")} {site} '
                     excluded_site = builder.exclude_site(args.get("exclude"))
                     url += excluded_site if excluded_site else ''
                     return url
@@ -57,7 +57,7 @@ class Cli(Init):
         if any(args):
             if args.get("search_query"):
 
-                url: str = f' https://google.com/search?q=site: instagram.com (inurl:{args.get("search_query")}* | intext:{args.get("bio")}*) {args.get("location")}'
+                url: str = f'https://google.com/search?q=site: instagram.com (inurl:{args.get("search_query")}* | intext:{args.get("bio")}*) {args.get("location")}'
                 return url
             else:
                 raise Exception("User name is not provided")
@@ -71,7 +71,7 @@ class Cli(Init):
 
             if any(args):
                 if(args.get("search_query")):
-                    url: str = f' https://google.com/search?q=inurl {args.get("search_query")} | intext: {args.get("search_query")} | inurl: {args.get("search_query")}'
+                    url: str = f'https://google.com/search?q=inurl {args.get("search_query")} | intext: {args.get("search_query")} | inurl: {args.get("search_query")}'
                     return url
                 else:
                     raise Exception("Should not be empty provide number\n")
