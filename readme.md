@@ -7,7 +7,7 @@ Google dorks easily
 
 ## Installation
 
-Install google dork cli
+Install google dork cli using pip
 
 ```bash
   >> pip install gdcli
