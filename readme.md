@@ -28,18 +28,34 @@ Install google dork cli
 
 
 
-[-h] [-op OPTION] [-q SEARCH_QUERY] [-s SITE] [-f FILE_TYPE] [-e EXCLUDE] [-b BIO] [-l LOCATION]        
-
-optional arguments:
-  -h, --help       show this help message and exit
-  -op OPTION       Option [1 2 3]
-  -q SEARCH_QUERY  Search Query
-  -s SITE          Specifc site for searching
-  -f FILE_TYPE     File type
-  -e EXCLUDE       Things to exclude
-  -b BIO           Bio of the user
-  -l LOCATION      Bio of the user
-
 ```
+
+
+ 
+
+
+
+
+
+
+    
+## options
+
+
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `-op` | `int` | **Required**. available options are [1,2,3] |
+| `-q` | `string` | **Required**. Search Query |
+| `-s` | `string` |Specifc site for searching|
+| `-f` | `string` | File type|
+| `-e` | `string` | Things to exclude|
+| `-b` | `string` | Bio of the user|
+| `-l` | `string` | location of the user like usa ,uk etc..|
+
+
+
+
+  
 ### Note this cli tool is still on development process and more features will be added very soon,and feel free to contribute 🚀🚀
 
