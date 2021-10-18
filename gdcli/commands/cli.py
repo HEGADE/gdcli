@@ -83,7 +83,7 @@ class Cli(Init):
             self.parser.print_usage()
         return None
 
-    def __query_build_file__(args) -> str:
+    def __query_build_file__(self,args) -> str:
         try:
             if(args.get("search_query")):
                 return f'https://google.com/search?q={args.get("search_query")} filetype:{args.get("file_type")}'

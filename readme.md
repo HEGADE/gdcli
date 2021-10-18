@@ -23,7 +23,14 @@ Install google dork cli using pip
         >> gdcli -op 1 -q ninja -s instagram -e gamer
 
     2) -op 2 for instagram user finding
-        >> gdcli -op 2 -q ninja -b gamer -l usa
+        >> gdcli -op 2 -q ninja -b gamer -l usa        
+
+    3) -op 2 for phone number search
+        >> gdcli -op 2 "223234566"
+
+    4) -op to for specific filetype
+        >> gdcli -op 3 -q python  -f docx
+               
 
 
 

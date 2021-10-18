@@ -8,13 +8,16 @@ class Init():
             '''Commamd line tool for Google dorks\n
 
             1) -op 1 for general query \n
-             >> gd -op 1 -q ninja -s instagram -e gamer \n
+             >> gdcli -op 1 -q ninja -s instagram -e gamer \n
 
             2) -op 2 for instagram user finding
-              >> gd -op 2 -q ninja -b gamer -l usa
+              >> gdcli -op 2 -q ninja -b gamer -l usa
+              
+            3) -op 2 for phone number search
+              >> gdcli -op 2 "223234566"
 
-            3) -op to for specific filetype
-              >> gd -op 3 -q python  -f docx
+            4) -op to for specific filetype
+              >> gdcli -op 3 -q python  -f docx
                
             ''')
         self.parser.add_argument(
