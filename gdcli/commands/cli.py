@@ -1,6 +1,5 @@
 
 from typing import Dict
-
 from gdcli.helpers.browser import open_browser
 from gdcli.utils.query import builder
 from gdcli.utils.cli_arguments.args import Init
@@ -20,6 +19,8 @@ class Cli(Init):
                 url = self.__query_build_insta__(vars(self.args))
             elif(self.args.option == 3):
                 url = self.__query_build_phone__(vars(self.args))
+            elif(self.args.option == 4):
+                url = self.__query_build_file__(vars(self.args))
             else:
                 raise Exception("Invalid option specified")
 
@@ -29,7 +30,6 @@ class Cli(Init):
             self.parser.print_usage()
             exit()
         if url is not None:
-
             open_browser(url=url)
 
     def __query_build_general__(self, args: Dict) -> str:
@@ -81,4 +81,16 @@ class Cli(Init):
         except Exception as e:
             sys.stdout.write(str(e))
             self.parser.print_usage()
+        return None
+
+    def __query_build_file__(args) -> str:
+        try:
+            if(args.get("search_query")):
+                return f'https://google.com/search?q={args.get("search_query")} filetype:{args.get("file_type")}'
+            else:
+                raise Exception(
+                    "search query is not found,pls provide search query")
+        except Exception as e:
+            print(e)
+            exit(0)
         return None
