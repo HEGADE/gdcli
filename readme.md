@@ -1,6 +1,6 @@
 # CLI for google dorks
 
-This is the command line tool made with pytohn which allows the users to perform
+This is the command line tool made with python which allows the users to perform
 Google dorks easily 
 
 
